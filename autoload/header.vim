@@ -593,7 +593,7 @@ fun s:has_required_headers_in_range(header_size_threshold)
     for header_field in headers_fields
         let header_field_line_nbr = search(header_field)
         if
-            \ header_field_line_nbr == 0 ||
+            " \ header_field_line_nbr == 0 ||
             \ header_field_line_nbr > a:header_size_threshold
             call setpos(".", save_pos)
             return 0
